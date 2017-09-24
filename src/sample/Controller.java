@@ -192,7 +192,7 @@ public class Controller {
             }
 
             DecimalFormat d = new DecimalFormat(".##");
-            total.setText("$" + d.format(currenttotal));
+            amount.setText("$" + d.format(currenttotal));
 
         });
 
@@ -292,7 +292,7 @@ public class Controller {
         g.setVgap(20);
 
 //        g.setGridLinesVisible(true);
-        Scene scene = new Scene(g, 700,600);
+        Scene scene = new Scene(g, 850,600);
         screen.setScene(scene);
         screen.showAndWait();
     }
