@@ -1,0 +1,70 @@
+/*
+    Document   : css1
+*/
+.root{
+
+    -fx-font-family: "Tahoma";
+    -fx-base:  rgb(250,250,250);
+    -fx-background:  #c0c0c0;
+    -fx-focus-color: #add8e6;
+}
+
+.button1{
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+	 -fx-base: #B10DC9;
+   	-fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+.button2{
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+	-fx-base: #b6e7c9;
+    -fx-border-color: #fffff0;
+   	-fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+.button3{
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+	-fx-base: #db7093;
+    -fx-border-color: #fffff0;
+   	-fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+.buttonspecial{
+	-fx-font-family: "Impact";
+	-fx-font-size: 11pt;
+	-fx-base: #00bfff;
+    -fx-border-color: #dc143c;
+   	-fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+
+.title{
+	-fx-font-family: "Impact";
+	-fx-font-size: 24pt;
+}
+
+.text1{
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+}
+
+.text2{
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+	-fx-font-color:#FFFFFF;
+}
+
+.text3{
+    -fx-font-family: "Tahoma";
+	-fx-font-size: 11pt;
+}

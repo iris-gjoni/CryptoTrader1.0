@@ -10,7 +10,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -24,58 +28,100 @@ public class Controller {
 
     /*
     huge code in here, instantiate the page, along with all conponents
+    creates the logos for each of the 6 cryptos
     add event handlers for the buttons
-    grip panes used to organise
+    grid pane used to organise
      */
     Controller(Stage primaryStage) throws Exception{
         Stage screen = new Stage();
         screen.initModality(Modality.APPLICATION_MODAL);
         screen.setTitle("hello");
 
-        Text title= new Text("Trade Screen") ;
+        Text title= new Text("Crypto Trader") ;
+        title.getStyleClass().add("title");
+        title.setTextAlignment(TextAlignment.CENTER);
 
         // t<name> holds the tokens
         TextField tether = new TextField();
+        tether.getStyleClass().add("text1");
         TextField tbit = new TextField();
+        tbit.getStyleClass().add("text1");
         TextField tvert = new TextField();
+        tvert.getStyleClass().add("text1");
         TextField t0x = new TextField();
+        t0x.getStyleClass().add("text1");
         TextField tlite = new TextField();
+        tlite.getStyleClass().add("text1");
         TextField tbmoon = new TextField();
+        tbmoon.getStyleClass().add("text1");
 
         // P<name> holds the price
         Text pether = new Text();
+        pether.getStyleClass().add("text2");
         Text pbit = new Text();
+        pbit.getStyleClass().add("text2");
         Text pvert = new Text();
+        pvert.getStyleClass().add("text2");
         Text p0x = new Text();
+        p0x.getStyleClass().add("text2");
         Text plite = new Text();
+        plite.getStyleClass().add("text2");
         Text pbmoon = new Text();
+        pbmoon.getStyleClass().add("text2");
 
         // b<name> holds the Balance
         Text bether = new Text();
+        bether.getStyleClass().add("text2");
         Text bbit = new Text();
+        bbit.getStyleClass().add("text2");
         Text bvert = new Text();
+        bvert.getStyleClass().add("text2");
         Text b0x = new Text();
+        b0x.getStyleClass().add("text2");
         Text blite = new Text();
+        blite.getStyleClass().add("text2");
         Text bbmoon = new Text();
+        bbmoon.getStyleClass().add("text2");
 
         Button refresh = new Button("refresh"); // used to ping the coin base API, generate USD balance
+        refresh.getStyleClass().add("button1");
+        refresh.setPrefWidth(70);
+        refresh.setPrefHeight(40);
         Button load = new Button("load"); // used to load token balances
+        load.getStyleClass().add("button1");
+        load.setPrefWidth(70);
+        load.setPrefHeight(40);
         Button save = new Button("save"); // will be used to save the aounts entered in the token balaces
+        save.getStyleClass().add("button1");
+        save.setPrefWidth(70);
+        save.setPrefHeight(40);
 
 
         // l<name> holds the label
         Label lether = new Label("ether: ");
+        lether.getStyleClass().add("text1");
         Label lbit = new Label("bitcoin: ");
+        lbit.getStyleClass().add("text1");
         Label llite = new Label("litecoin: ");
+        llite.getStyleClass().add("text1");
         Label lvert = new Label("vertcoin: ");
+        lvert.getStyleClass().add("text1");
         Label l0x = new Label("0x: ");
+        l0x.getStyleClass().add("text1");
         Label lbmoon = new Label("blackmoon: ");
+        lbmoon.getStyleClass().add("text1");
 
         Label ltoken = new Label("tokens:");
+        ltoken.getStyleClass().add("text1");
         Label lprice = new Label("price:");
+        lprice.getStyleClass().add("text1");
         Label lbalance = new Label("balance:");
+        lbalance.getStyleClass().add("text1");
         Label total = new Label("Total:");
+        total.getStyleClass().add("text1");
         Text amount = new Text();
+        amount.setFill(Color.valueOf("#008000"));
+        amount.setFont(Font.font("impact", 34));
 
         //--------------------------                         images used in project
 
@@ -97,11 +143,11 @@ public class Controller {
         ilite.setFitHeight(40);
         ilite.setFitWidth(40);
 
-        Image vert = new Image("vertcoin.png");
+        Image vert = new Image("vertcoin2.png");
         ImageView ivert = new ImageView();
         ivert.setImage(vert);
-        ivert.setFitHeight(40);
-        ivert.setFitWidth(40);
+        ivert.setFitHeight(50);
+        ivert.setFitWidth(50);
 
         Image _0x = new Image("0x.png");
         ImageView i0x = new ImageView();
@@ -226,7 +272,7 @@ public class Controller {
         g.setVgap(10);
         g.setPadding(new Insets(10, 10, 10, 10));
 
-        g.add(title, 4, 0);
+        g.add(title, 0, 0, 8, 1);
         g.add(refresh, 8, 1);
         g.add(load, 0, 1);
         g.add(save, 0, 2);
@@ -266,9 +312,9 @@ public class Controller {
         g.add(l0x, 6, 1);
         g.add(lbmoon, 7, 1);
 
-        g.add(ltoken, 1, 2);
-        g.add(lprice, 1, 3);
-        g.add(lbalance, 1, 4);
+        g.add(ltoken, 1, 3);
+        g.add(lprice, 1, 4);
+        g.add(lbalance, 1, 5);
 
         ColumnConstraints column = new ColumnConstraints(70);
         g.getColumnConstraints().add(column);
@@ -293,6 +339,8 @@ public class Controller {
 
 //        g.setGridLinesVisible(true);
         Scene scene = new Scene(g, 850,600);
+//        scene.getStylesheets().add(this.getClass().getResource("resources\\DarkTheme.css").toExternalForm()); // uses the css sheet
+        scene.getStylesheets().add("DarkTheme.css");
         screen.setScene(scene);
         screen.showAndWait();
     }
