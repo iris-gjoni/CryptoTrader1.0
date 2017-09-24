@@ -10,9 +10,10 @@ public class Main extends Application {
 
     1. get the symbols for each of the crypto
 
-    2. make a CSS to make it look similar to GDAX
+    2. make a CSS to make it look similar to GDAX theme
 
     3. look at expansibility
+
      */
 
     @Override
@@ -21,10 +22,10 @@ public class Main extends Application {
         //only call the controller constructor which will create the page, and all the event handlers
         Controller con = new Controller(primaryStage);
 
-
     }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }

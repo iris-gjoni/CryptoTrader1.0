@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -74,6 +76,47 @@ public class Controller {
         Label lbalance = new Label("balance:");
         Label total = new Label("Total:");
         Text amount = new Text();
+
+        //--------------------------                         images used in project
+
+        Image eth = new Image("ether.png");
+        ImageView iether = new ImageView();
+        iether.setImage(eth);
+        iether.setFitHeight(40);
+        iether.setFitWidth(40);
+
+        Image bit = new Image("bitcoin.png");
+        ImageView ibit = new ImageView();
+        ibit.setImage(bit);
+        ibit.setFitHeight(40);
+        ibit.setFitWidth(40);
+
+        Image lite = new Image("litecoin.png");
+        ImageView ilite = new ImageView();
+        ilite.setImage(lite);
+        ilite.setFitHeight(40);
+        ilite.setFitWidth(40);
+
+        Image vert = new Image("vertcoin.png");
+        ImageView ivert = new ImageView();
+        ivert.setImage(vert);
+        ivert.setFitHeight(40);
+        ivert.setFitWidth(40);
+
+        Image _0x = new Image("0x.png");
+        ImageView i0x = new ImageView();
+        i0x.setImage(_0x);
+        i0x.setFitHeight(40);
+        i0x.setFitWidth(40);
+
+        Image bmn = new Image("blackmoon-crypto.png");
+        ImageView ibmn = new ImageView();
+        ibmn.setImage(bmn);
+        ibmn.setFitHeight(40);
+        ibmn.setFitWidth(40);
+
+
+        //----------------------                         event handlers begin here
 
         refresh.setOnAction(e ->{
 
@@ -184,30 +227,37 @@ public class Controller {
         g.setPadding(new Insets(10, 10, 10, 10));
 
         g.add(title, 4, 0);
-        g.add(refresh, 0, 1);
-        g.add(load, 0, 2);
-        g.add(save, 0, 3);
+        g.add(refresh, 8, 1);
+        g.add(load, 0, 1);
+        g.add(save, 0, 2);
 
-        g.add(tbit, 2, 2);
-        g.add(tether, 3, 2);
-        g.add(tlite, 4, 2);
-        g.add(tvert, 5, 2);
-        g.add(t0x, 6, 2);
-        g.add(tbmoon, 7, 2);
-        g.add(pbit, 2, 3);
-        g.add(pether, 3, 3);
-        g.add(plite, 4, 3);
-        g.add(pvert, 5, 3);
-        g.add(p0x, 6, 3);
-        g.add(pbmoon, 7, 3);
-        g.add(bbit, 2, 4);
-        g.add(bether, 3, 4);
-        g.add(blite, 4, 4);
-        g.add(bvert, 5, 4);
-        g.add(b0x, 6, 4);
-        g.add(bbmoon, 7, 4);
-        g.add(total, 2, 5);
-        g.add(amount, 3, 5);
+        g.add(tbit, 2, 3);
+        g.add(tether, 3, 3);
+        g.add(tlite, 4, 3);
+        g.add(tvert, 5, 3);
+        g.add(t0x, 6, 3);
+        g.add(tbmoon, 7, 3);
+        g.add(pbit, 2, 4);
+        g.add(pether, 3, 4);
+        g.add(plite, 4, 4);
+        g.add(pvert, 5, 4);
+        g.add(p0x, 6, 4);
+        g.add(pbmoon, 7, 4);
+        g.add(bbit, 2, 5);
+        g.add(bether, 3, 5);
+        g.add(blite, 4, 5);
+        g.add(bvert, 5, 5);
+        g.add(b0x, 6, 5);
+        g.add(bbmoon, 7, 5);
+        g.add(total, 2, 6);
+        g.add(amount, 3, 6);
+
+        g.add(ibit, 2,2);
+        g.add(iether, 3,2);
+        g.add(ilite, 4,2);
+        g.add(ivert, 5,2);
+        g.add(i0x, 6,2);
+        g.add(ibmn, 7,2);
 
         g.add(lbit, 2, 1);
         g.add(lether, 3, 1);
@@ -230,7 +280,9 @@ public class Controller {
         g.getColumnConstraints().add(column);
         g.getColumnConstraints().add(column);
 
-        RowConstraints row = new RowConstraints(30);
+        RowConstraints row = new RowConstraints(40);
+        g.getRowConstraints().add(row);
+        g.getRowConstraints().add(row);
         g.getRowConstraints().add(row);
         g.getRowConstraints().add(row);
         g.getRowConstraints().add(row);
