@@ -43,17 +43,17 @@ public class Controller {
 
         // t<name> holds the tokens
         TextField tether = new TextField();
-        tether.getStyleClass().add("text1");
+        tether.getStyleClass().add("text2");
         TextField tbit = new TextField();
-        tbit.getStyleClass().add("text1");
+        tbit.getStyleClass().add("text2");
         TextField tvert = new TextField();
-        tvert.getStyleClass().add("text1");
+        tvert.getStyleClass().add("text2");
         TextField t0x = new TextField();
-        t0x.getStyleClass().add("text1");
+        t0x.getStyleClass().add("text2");
         TextField tlite = new TextField();
-        tlite.getStyleClass().add("text1");
+        tlite.getStyleClass().add("text2");
         TextField tbmoon = new TextField();
-        tbmoon.getStyleClass().add("text1");
+        tbmoon.getStyleClass().add("text2");
 
         // P<name> holds the price
         Text pether = new Text();

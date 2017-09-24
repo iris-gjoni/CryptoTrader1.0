@@ -18,24 +18,6 @@
     -fx-padding: 5;
 }
 
-.button2{
-	-fx-font-family: "Tahoma";
-	-fx-font-size: 11pt;
-	-fx-base: #b6e7c9;
-    -fx-border-color: #fffff0;
-   	-fx-border-radius: 10;
-    -fx-background-radius: 10;
-    -fx-padding: 5;
-}
-.button3{
-	-fx-font-family: "Tahoma";
-	-fx-font-size: 11pt;
-	-fx-base: #db7093;
-    -fx-border-color: #fffff0;
-   	-fx-border-radius: 10;
-    -fx-background-radius: 10;
-    -fx-padding: 5;
-}
 
 .buttonspecial{
 	-fx-font-family: "Impact";
@@ -61,7 +43,6 @@
 .text2{
 	-fx-font-family: "Tahoma";
 	-fx-font-size: 11pt;
-	-fx-font-color:#FFFFFF;
 }
 
 .text3{
