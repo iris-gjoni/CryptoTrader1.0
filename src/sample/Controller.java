@@ -12,7 +12,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
@@ -143,7 +142,7 @@ public class Controller {
         ilite.setFitHeight(40);
         ilite.setFitWidth(40);
 
-        Image vert = new Image("vertcoin2.png");
+        Image vert = new Image("Vert.png");
         ImageView ivert = new ImageView();
         ivert.setImage(vert);
         ivert.setFitHeight(50);
@@ -357,7 +356,7 @@ public class Controller {
 
         //name not implemented yet
 
-        String irisDetails = "resources\\loadUser";
+        String irisDetails = "CryptoTrader1.0\\resources\\loadUser.txt";
         File userDetails = new File(irisDetails);
 
         BufferedReader reader = new BufferedReader(new FileReader(userDetails));
