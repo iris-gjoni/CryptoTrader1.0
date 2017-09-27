@@ -1,7 +1,6 @@
 import urllib
 import json
 
-
 class mo_money_mo_problems():	
 
 	 def __init__(self):
@@ -14,7 +13,6 @@ class mo_money_mo_problems():
 		wallet_data = self.convert_wei_to_eth(wallet_data)
 		usd_value = self.calculate_worth_usd(wallet_data, eth_price)
 		self.print_current_wallet_info(wallet_data,usd_value)
-
 
 	 def pull_wallet_data(self, wallet_address):
 	 	#pull the data from the api
@@ -35,7 +33,6 @@ class mo_money_mo_problems():
 
 	 def print_current_wallet_info(self, eth_balance, usd_balance):
 	 	print("Ethereum balance: "+str(eth_balance)+" worth: $"+str(usd_balance))
-		
 
 	 def calculate_worth_usd(self, total_eth,current_price):
 		price = float(total_eth) * float(current_price)
@@ -49,7 +46,4 @@ class mo_money_mo_problems():
 		eth_price = eth_info["price_usd"]		
 		return eth_price
 
-
-
 mmmp = mo_money_mo_problems()
-
