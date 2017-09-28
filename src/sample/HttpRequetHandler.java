@@ -17,25 +17,7 @@ public class HttpRequetHandler {
     getdata will get the crypto price, specified by name
      */
 
-    public String getdata(String name){
-        String url = "hi";
-
-        // currently on 6 possible choices for crypto
-        if (name.equals("ether")){
-            url = "https://api.coinmarketcap.com/v1/ticker/ethereum/";
-        } else if (name.equals("bitcoin")){
-            url = "https://api.coinmarketcap.com/v1/ticker/bitcoin/";
-        } else if (name.equals("vertcoin")){
-            url = "https://api.coinmarketcap.com/v1/ticker/vertcoin/";
-        } else if (name.equals("litecoin")){
-            url = "https://api.coinmarketcap.com/v1/ticker/litecoin/";
-        } else if (name.equals("0x")){
-            url = "https://api.coinmarketcap.com/v1/ticker/0x/";
-        } else if (name.equals("blackmoon-crypto")){
-            url = "https://api.coinmarketcap.com/v1/ticker/blackmoon-crypto/";
-        } else {
-            System.out.println("failed to identify name");
-        }
+    public String getdata(String url){
 
         //once the url has been decided
 
@@ -51,7 +33,7 @@ public class HttpRequetHandler {
 
             while ((inputLine = in.readLine()) != null) {
                 if(inputLine.contains("price_usd")){
-                    response.append("$"+ inputLine.substring(22,inputLine.length() -3)); // gets only the value of the price
+                    response.append(inputLine.substring(22,inputLine.length() -3)); // gets only the value of the price
                 }
             }
             in.close();
